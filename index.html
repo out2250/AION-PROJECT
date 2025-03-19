@@ -25,12 +25,15 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+
   </head>
   <body>
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Indomobil<span>GAC AION</span></a>
+	      <a class="navbar-brand" href="index.html">Car<span>Book</span></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -50,28 +53,27 @@
 	  </nav>
     <!-- END nav -->
     
-    <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/ION_Logo.jpeg'); background-position: top; background-size: cover;" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
-          <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
-              <div class="col-lg-8 ftco-animate">
-                  <div class="text w-100 text-center mb-md-5 pb-md-5">
-                      <h1 class="mb-4">Indomobil GAC AION Pantai Indah Kapuk</h1>
-                      <p style="font-size: 18px; text-align: justify;">Temukan pengalaman berkendara masa depan dengan mobil listrik canggih dari AION! 
-                          Garansi baterai dan motor seumur hidup*, free service & part hingga 5 tahun, serta layanan darurat 24/7. 
-                          Nikmati juga pemasangan <strong>free wall charger</strong> untuk kemudahan pengisian daya di rumah Anda.</p>
-                          <div class="icon d-flex align-items-center justify-content-center">
-                              <span class="ion-ios-play"></span>
-                          </div>
-                          <div class="heading-title ml-5">
-                              <span>Kenali Lebih Dekat AION</span>
-                          </div>
-                      </a>
-                  </div>
-              </div>
+        <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
+          <div class="col-lg-8 ftco-animate">
+          	<div class="text w-100 text-center mb-md-5 pb-md-5">
+	            <h1 class="mb-4">Fast &amp; Easy Way To Rent A Car</h1>
+	            <p style="font-size: 18px;">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts</p>
+	            <a href="https://vimeo.com/45830194" class="icon-wrap popup-vimeo d-flex align-items-center mt-4 justify-content-center">
+	            	<div class="icon d-flex align-items-center justify-content-center">
+	            		<span class="ion-ios-play"></span>
+	            	</div>
+	            	<div class="heading-title ml-5">
+		            	<span>Easy steps for renting a car</span>
+	            	</div>
+	            </a>
+            </div>
           </div>
+        </div>
       </div>
-  </div>
+    </div>
 
      <section class="ftco-section ftco-no-pt bg-light">
     	<div class="container">
@@ -79,71 +81,65 @@
     			<div class="col-md-12	featured-top">
     				<div class="row no-gutters">
 	  					<div class="col-md-4 d-flex align-items-center">
-	  						<form action="#" class="request-form ftco-animate bg-primary p-4 rounded shadow">
-                  <h2 class="text-white text-center font-weight-bold mb-3">AION Y PLUS - The Future of Driving</h2>
-                  <p class="text-light text-center">Mobil listrik canggih dengan desain modern dan teknologi terkini.</p>
-              
-                  <div class="form-group">
-                      <p class="text-white"><strong>100% Electric, Zero Emission</strong><br>Ramah lingkungan dan hemat energi.</p>
-                  </div>
-              
-                  <div class="form-group">
-                      <p class="text-white"><strong>Long Range & Fast Charging</strong><br>Jangkauan luas, isi daya lebih cepat.</p>
-                  </div>
-              
-                  <div class="form-group">
-                      <p class="text-white"><strong>Spacious & Smart Interior</strong><br>Kabin luas dengan fitur cerdas untuk kenyamanan maksimal.</p>
-                  </div>
-              
-                  <div class="form-group">
-                      <p class="text-white"><strong>Exclusive Promo</strong><br>Dapatkan hingga <span class="text-warning font-weight-bold">20% diskon</span> untuk pembelian pertama.</p>
-                  </div>
-              
-                  <div class="form-group text-center">
-                      <button type="submit" class="btn btn-warning py-3 px-4 font-weight-bold shadow-lg rounded">
-                          Get Your AION Y PLUS Now
-                      </button>
-                  </div>
-              </form>
-              
+	  						<form action="#" class="request-form ftco-animate bg-primary">
+		          		<h2>Make your trip</h2>
+			    				<div class="form-group">
+			    					<label for="" class="label">Pick-up location</label>
+			    					<input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+			    				</div>
+			    				<div class="form-group">
+			    					<label for="" class="label">Drop-off location</label>
+			    					<input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+			    				</div>
+			    				<div class="d-flex">
+			    					<div class="form-group mr-2">
+			                <label for="" class="label">Pick-up date</label>
+			                <input type="text" class="form-control" id="book_pick_date" placeholder="Date">
+			              </div>
+			              <div class="form-group ml-2">
+			                <label for="" class="label">Drop-off date</label>
+			                <input type="text" class="form-control" id="book_off_date" placeholder="Date">
+			              </div>
+		              </div>
+		              <div class="form-group">
+		                <label for="" class="label">Pick-up time</label>
+		                <input type="text" class="form-control" id="time_pick" placeholder="Time">
+		              </div>
+			            <div class="form-group">
+			              <input type="submit" value="Rent A Car Now" class="btn btn-secondary py-3 px-4">
+			            </div>
+			    			</form>
 	  					</div>
 	  					<div class="col-md-8 d-flex align-items-center">
-                <div class="services-wrap rounded-right w-100">
-                    <h3 class="heading-section mb-4">A Smarter Way to Get Your Dream Car</h3>
-                    <div class="row d-flex mb-4">
-                        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                            <div class="services w-100 text-center">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="flaticon-route"></span>
-                                </div>
-                                <div class="text w-100">
-                                    <h3 class="heading mb-2">Go To Indomobil GAC AION Pantai Indah Kapuk</h3>
-                                </div>
-                            </div>      
-                        </div>
-                        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                            <div class="services w-100 text-center">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="flaticon-handshake"></span>
-                                </div>
-                                <div class="text w-100">
-                                    <h3 class="heading mb-2">Get the Best Deal</h3>
-                                </div>
-                            </div>      
-                        </div>
-                        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                            <div class="services w-100 text-center">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="flaticon-rent"></span>
-                                </div>
-                                <div class="text w-100">
-                                    <h3 class="heading mb-2">Drive Home Your Dream Car</h3>
-                                </div>
-                            </div>      
-                        </div>
-                    </div>
-                </div>
-            </div>            
+	  						<div class="services-wrap rounded-right w-100">
+	  							<h3 class="heading-section mb-4">Better Way to Rent Your Perfect Cars</h3>
+	  							<div class="row d-flex mb-4">
+					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					            <div class="services w-100 text-center">
+				              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
+				              	<div class="text w-100">
+					                <h3 class="heading mb-2">Choose Your Pickup Location</h3>
+				                </div>
+					            </div>      
+					          </div>
+					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					            <div class="services w-100 text-center">
+				              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-handshake"></span></div>
+				              	<div class="text w-100">
+					                <h3 class="heading mb-2">Select the Best Deal</h3>
+					              </div>
+					            </div>      
+					          </div>
+					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					            <div class="services w-100 text-center">
+				              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-rent"></span></div>
+				              	<div class="text w-100">
+					                <h3 class="heading mb-2">Reserve Your Rental Car</h3>
+					              </div>
+					            </div>      
+					          </div>
+					        </div>
+					        <p><a href="#" class="btn btn-primary py-3 px-4">Reserve Your Perfect Car</a></p>
 	  						</div>
 	  					</div>
 	  				</div>
@@ -157,7 +153,7 @@
     		<div class="row justify-content-center">
           <div class="col-md-12 heading-section text-center ftco-animate mb-5">
           	<span class="subheading">What we offer</span>
-            <h2 class="mb-2">Featured Vehicles</h2>
+            <h2 class="mb-2">Feeatured Vehicles</h2>
           </div>
         </div>
     		<div class="row">
@@ -165,47 +161,47 @@
     				<div class="carousel-car owl-carousel">
     					<div class="item">
     						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/AION\ Y\ PLUS.jpeg);">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car-1.jpg);">
 		    					</div>
 		    					<div class="text">
-		    						<h2 class="mb-0"><a href="#">AION Y PLUS </a></h2>
+		    						<h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
 		    						<div class="d-flex mb-3">
-                      <span class="cat">Available Colors</span>
-                      <p class="ml-auto">Sunset Orange, Galaxy Blue, Wilderness Sand, Sea Fluorescent Gray, Arctic White, Holographic Silver, Night Shadow Black, Sunset Orange White Roof, Galaxy Blue White Roof.</p>
-                  </div>                  
-                  <p class="d-flex mb-0 d-block"><a href="car.html" class="btn btn-secondary py-2 ml-1">Details</a></p>
+			    						<span class="cat">Cheverolet</span>
+			    						<p class="price ml-auto">$500 <span>/day</span></p>
+		    						</div>
+		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
 		    					</div>
 		    				</div>
     					</div>
     					<div class="item">
     						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/black.jpeg);">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car-2.jpg);">
 		    					</div>
 		    					<div class="text">
-		    						<h2 class="mb-0"><a href="#">AION V PLUS</a></h2>
+		    						<h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
 		    						<div class="d-flex mb-3">
-                      <span class="cat">Available Colors</span>
-                      <p class="ml-auto">Beige, Black, Brown, Orange</p>
-                  </div>
-                  <p class="d-flex mb-0 d-block"><a href="car.html" class="btn btn-secondary py-2 ml-1">Details</a></p>
+			    						<span class="cat">Cheverolet</span>
+			    						<p class="price ml-auto">$500 <span>/day</span></p>
+		    						</div>
+		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
 		    					</div>
 		    				</div>
     					</div>
     					<div class="item">
     						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/HYPTECH.jpeg);">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car-3.jpg);">
 		    					</div>
 		    					<div class="text">
-                      <h2 class="mb-0"><a href="#">HYPTEC HT</a></h2>
-                      <div class="d-flex mb-3">
-                        <span class="cat">Available Colors</span>
-                        <p class="ml-auto">Sunset Orange, Galaxy Blue, Wilderness Sand, Sea Fluorescent Gray, Arctic White, Holographic Silver, Night Shadow Black, Sunset Orange White Roof, Galaxy Blue White Roof.</p>
-                    </div>                  
-		    						<p class="d-flex mb-0 d-block"><a href="#car.html" class="btn btn-secondary py-2 ml-1">Details</a></p>
+		    						<h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
+		    						<div class="d-flex mb-3">
+			    						<span class="cat">Cheverolet</span>
+			    						<p class="price ml-auto">$500 <span>/day</span></p>
+		    						</div>
+		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
 		    					</div>
 		    				</div>
     					</div>
-    					<!-- <div class="item">
+    					<div class="item">
     						<div class="car-wrap rounded ftco-animate">
 		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car-4.jpg);">
 		    					</div>
@@ -218,7 +214,7 @@
 		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
 		    					</div>
 		    				</div>
-    					</div> -->
+    					</div>
     				</div>
     			</div>
     		</div>
@@ -226,29 +222,25 @@
     </section>
 
     <section class="ftco-section ftco-about">
-      <div class="container">
-          <div class="row no-gutters">
-            <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="position: relative; overflow: hidden;">
-              <video autoplay muted loop class="w-100 h-100" style="position: absolute; top: 0; left: 0; object-fit: cover;">
-                  <source src="images/Video (4).mp4" type="video/mp4">
-                  Browser Anda tidak mendukung video.
-              </video>
-          </div>
-              <div class="col-md-6 wrap-about ftco-animate">
-                  <div class="heading-section heading-section-white pl-md-5">
-                      <span class="subheading">Exclusive Offers</span>
-                      <h2 class="mb-4">Premium Warranty & Free Services</h2>
-                      <p>Dapatkan perlindungan terbaik dengan <strong>Garansi Seumur Hidup</strong> untuk baterai dan motor kendaraan listrik Anda! Kami juga menyediakan <strong>Free Service & Part</strong> hingga 5 tahun atau 100.000 Km* untuk memastikan kendaraan Anda tetap dalam kondisi optimal.</p>
-                      <p>Selain itu, nikmati <strong>garansi kendaraan</strong> di luar komponen listrik hingga <strong>8 tahun / 160.000 Km</strong> serta <strong>gratis wall charger 7 KW</strong> dengan instalasi hingga 5 meter dan garansi 2 tahun.</p>
-                      <p>Kami juga memberikan <strong>Emergency Roadside Assistance 24/7</strong> di area tertentu, gratis hingga 40 Km selama periode garansi 8 tahun. Pastikan perjalanan Anda selalu nyaman dan aman bersama kami!</p>
-                      <p><a href="car.html" class="btn btn-primary py-3 px-4">Get Your Car Now</a></p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/about.jpg);">
+					</div>
+					<div class="col-md-6 wrap-about ftco-animate">
+	          <div class="heading-section heading-section-white pl-md-5">
+	          	<span class="subheading">About us</span>
+	            <h2 class="mb-4">Welcome to Carbook</h2>
 
-		<!-- <section class="ftco-section">
+	            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+	            <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+	            <p><a href="#" class="btn btn-primary py-3 px-4">Search Vehicle</a></p>
+	          </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section">
 			<div class="container">
 				<div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
@@ -438,18 +430,48 @@
           </div>
         </div>
       </div>
-    </section>	 -->
+    </section>	
 
-    <!-- <section class="ftco-counter ftco-section img bg-light" id="section-counter">
-      <div class="overlay"></div>
-      <div class="container d-flex justify-content-center align-items-center">
-          <video class="img-fluid" autoplay muted loop>
-              <source src="images/Video (4).mp4" type="video/mp4">
-              Browser Anda tidak mendukung video.
-          </video>
-      </div>
-  </section> -->
-  
+    <section class="ftco-counter ftco-section img bg-light" id="section-counter">
+			<div class="overlay"></div>
+    	<div class="container">
+    		<div class="row">
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="60">0</strong>
+                <span>Year <br>Experienced</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="1090">0</strong>
+                <span>Total <br>Cars</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="2590">0</strong>
+                <span>Happy <br>Customers</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text d-flex align-items-center">
+                <strong class="number" data-number="67">0</strong>
+                <span>Total <br>Branches</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section>	
+
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
@@ -517,7 +539,52 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+  <div id="map" style="height: 400px; width: 100%;"></div>
+  <script>
+      var lat = -6.1248389;
+      var lon = 106.7549738;
+      var markerCoords = ol.proj.fromLonLat([lon, lat]);
 
+      var map = new ol.Map({
+          target: 'map',
+          layers: [
+              new ol.layer.Tile({
+                  source: new ol.source.OSM()
+              })
+          ],
+          view: new ol.View({
+              center: markerCoords,
+              zoom: 16
+          })
+      });
+
+      var marker = new ol.Feature({
+          geometry: new ol.geom.Point(markerCoords)
+      });
+
+      marker.setStyle(new ol.style.Style({
+          image: new ol.style.Icon({
+              anchor: [0.5, 1],
+              src: 'https://openlayers.org/en/latest/examples/data/icon.png'
+          })
+      }));
+
+      var vectorLayer = new ol.layer.Vector({
+          source: new ol.source.Vector({
+              features: [marker]
+          })
+      });
+      
+      map.addLayer(vectorLayer);
+
+      map.on('click', function(event) {
+          map.forEachFeatureAtPixel(event.pixel, function(feature) {
+              if (feature === marker) {
+                  window.open(`https://www.google.com/maps?q=${lat},${lon}`, '_blank');
+              }
+          });
+      });
+  </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -532,7 +599,6 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
     

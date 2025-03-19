@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+
   </head>
   <body>
     
@@ -536,7 +539,52 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+  <div id="map" style="height: 400px; width: 100%;"></div>
+  <script>
+      var lat = -6.1248389;
+      var lon = 106.7549738;
+      var markerCoords = ol.proj.fromLonLat([lon, lat]);
 
+      var map = new ol.Map({
+          target: 'map',
+          layers: [
+              new ol.layer.Tile({
+                  source: new ol.source.OSM()
+              })
+          ],
+          view: new ol.View({
+              center: markerCoords,
+              zoom: 16
+          })
+      });
+
+      var marker = new ol.Feature({
+          geometry: new ol.geom.Point(markerCoords)
+      });
+
+      marker.setStyle(new ol.style.Style({
+          image: new ol.style.Icon({
+              anchor: [0.5, 1],
+              src: 'https://openlayers.org/en/latest/examples/data/icon.png'
+          })
+      }));
+
+      var vectorLayer = new ol.layer.Vector({
+          source: new ol.source.Vector({
+              features: [marker]
+          })
+      });
+      
+      map.addLayer(vectorLayer);
+
+      map.on('click', function(event) {
+          map.forEachFeatureAtPixel(event.pixel, function(feature) {
+              if (feature === marker) {
+                  window.open(`https://www.google.com/maps?q=${lat},${lon}`, '_blank');
+              }
+          });
+      });
+  </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -551,7 +599,6 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
     

@@ -525,13 +525,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
       });
 
       var marker = new ol.Feature({
-          geometry: new ol.geom.Point(markerCoords)
+          geometry: new ol.geom.Point(markerCoords),
+          name: 'Indomobil GAC AION Pantai Indah Kapuk'
       });
 
       marker.setStyle(new ol.style.Style({
           image: new ol.style.Icon({
               anchor: [0.5, 1],
               src: 'https://openlayers.org/en/latest/examples/data/icon.png'
+          }),
+          text: new ol.style.Text({
+              text: 'Indomobil GAC AION Pantai Indah Kapuk',
+              offsetY: -25,
+              font: 'bold 16px Arial, sans-serif',
+              fill: new ol.style.Fill({ color: '#000' }),
+              stroke: new ol.style.Stroke({ color: '#fff', width: 2 })
           })
       }));
 
@@ -546,7 +554,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
       map.on('click', function(event) {
           map.forEachFeatureAtPixel(event.pixel, function(feature) {
               if (feature === marker) {
-                  window.open(`https://www.google.com/maps?q=${lat},${lon}`, '_blank');
+                  window.open('https://www.google.com/maps/search/indomobil+gac+aion+pantai+indah+kapuk/@-6.1251491,106.7541963,19z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDMxOC4wIKXMDSoASAFQAw%3D%3D', '_blank');
               }
           });
       });

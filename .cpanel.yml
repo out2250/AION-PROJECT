@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/MY_CPANEL_USERNAME/public_html/
+    - export DEPLOYPATH=/home/gacj4381/public_html/
     - /bin/cp -R . $DEPLOYPATH
